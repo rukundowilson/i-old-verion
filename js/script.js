@@ -40,4 +40,4 @@
     document.addEventListener("DOMContentLoaded",navToogler)
 
     // -----------unfold projects-----------
-    project=
+    // project=
