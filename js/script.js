@@ -29,3 +29,15 @@
         }
     }
     document.addEventListener("DOMContentLoaded",showSkills);
+
+    navToogler=function(){
+        barMenu=document.getElementById('menu');
+        navMenu=document.getElementById('navmenu')
+        barMenu.addEventListener('click',function(){
+        navMenu.classList.toggle('show')
+    })
+    }
+    document.addEventListener("DOMContentLoaded",navToogler)
+
+    // -----------unfold projects-----------
+    project=

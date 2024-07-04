@@ -24,17 +24,26 @@ header{
 }
 nav{
     display: flex;
+    justify-content: space-between;
 }
-.navbar{
+.menu{
+    font-size: 2.3rem;
+    display: none;
+    margin: 10px;
+}
+#navmenu{
     background-color: #fff;
-    padding: 10px 20px;
+    padding: 7px 20px;
     box-shadow: 2px 1px 2px 3px #00000011;
     margin: 17px 12px;
     border-radius: 15px;
     position: fixed;
 }
+#navmenu.show{
+    display: block;
+}
 .theme{
-    background-color: #ffffff9d;
+    background-color: #fff;
     /* box-shadow: 1px 1px 2px 3px #0000000e; */
     border: 1px solid #cccccc6e;
     text-align: center;
@@ -53,14 +62,12 @@ nav{
 }
 .navlinks ul li{
     display: inline;
-    margin: 5px;
-    text-decoration: none;
 }
 .navlinks ul li a{
-    display: inline;
-    margin: 5px;
     text-decoration: none;
     color: #000;
+    margin: 12px;
+    text-transform: capitalize;
 }
 .picture{
     background: #cccccc34;
@@ -204,18 +211,21 @@ main{
 #skills {
     margin: 20px 0 20px 0;
 }
-
+#skills h4{
+    font-size: 18px;
+}
 .skills-parent {
     display: flex;
-    justify-content: center;
     gap: 10px;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 
 .wrap-skills {
-    margin: 20px 14px 0 14px;
+    margin: 20px 16px 0 14px;
     background-color: #fff;
-    padding: 30px;
+    padding: 20px;
     border-radius: 5px;
     border: 1px solid #cccccc59;
     flex-grow: 1;
@@ -226,9 +236,8 @@ main{
 }
 
 .wrap-skills ul li {
-    font-size: 1.1rem;
+    font-size: 1rem;
     margin: 20px 0 0 30px;
-    position: relative;
     color: #000000d0;
 }
 .wrap-skills ul li span {
@@ -288,12 +297,15 @@ main{
 }
 .experience{
     display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 20px;
 }
 .projects{
     border: 1px solid #cccccc41;
     padding: 10px;
     margin: 25px 10px;
+    text-wrap: nowrap;
 }
 .row1{
     display: flex;
@@ -383,7 +395,7 @@ main{
 .contact-me button{
     display: block;
     margin: 15px auto;
-    padding: 7px;
+    padding: 7px 15px;
     border: none;
     border-radius: 7px;
     color: #000000bd;
@@ -392,10 +404,73 @@ footer{
     display: flex;
     padding: 10px;
     justify-content: center;
+    gap: 20px;
 }
 hr{
     max-width: 1100px;
     display: block;
     margin: 0 auto;
     color: #00000086;
+}
+footer small{
+    color: #00000098;
+}
+footer a{
+    color: #000000c0;
+    text-decoration: none;
+}
+.uil-arrow-down,
+.uil-arrow{
+    font-size: 2rem;
+}
+.copy-right{
+    margin: 13px 10px;
+    display: block;
+}
+/* -------responsive--- */
+@media screen and (max-width: 930px){
+    /* ----nav bar----- */
+    #navmenu{
+        display: none;
+        top: 35px;
+        text-align: left;
+        padding: 10px;
+        line-height: 20px;
+
+    }
+    .navlinks ul{
+        text-decoration: none;
+        color: #000;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .menu{
+        display: block;
+        position: fixed;
+        
+    }
+    .wrap-skills {
+        padding: 10px;
+        border: none;
+        flex-grow: 1;
+    }
+}
+@media screen and (max-width: 880px){
+    .experience{
+        flex-wrap: wrap;
+    }
+    .contact-me{
+        max-width: 500px;
+    }
+
+}
+/* -------responsive--- */
+@media screen and (max-width: 550px){
+    .wrap-skills {
+        padding: 10px;
+        flex-grow: 1;
+        border: 1px solid #cccccc59;
+        margin: 10px 30px;
+    }
 }
