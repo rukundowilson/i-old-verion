@@ -25,23 +25,28 @@ header {
 }
 
 nav {
-    display: flex;
-    justify-content: space-between;
+    position: fixed;
+    top: 10px;    
 }
 
 .menu {
     font-size: 2.3rem;
     display: none;
     margin: 10px;
+
 }
 
 #navmenu {
-    background-color: #fff;
-    padding: 7px 20px;
+    display: flex;
+    position: absolute;
+    padding: 10px;
+    background: #fff;
+    left: -25px;
+    align-items: center;
+    margin: 18px 5px;
+    border-radius: 9px;
     box-shadow: 2px 1px 2px 3px #00000011;
-    margin: 17px 12px;
-    border-radius: 15px;
-    position: fixed;
+
 }
 
 #navmenu.show {
@@ -56,8 +61,9 @@ nav {
     border-radius: 50%;
     padding: 1px 7px;
     position: fixed;
-    top: 0;
-    left: 20%;
+    top: 10px;
+    right: 20%;
+  
 }
 
 .uil-brightness-low {
@@ -66,10 +72,8 @@ nav {
 
 .navlinks ul {
     list-style: none;
-}
-
-.navlinks ul li {
-    display: inline;
+    display: flex;
+    align-items: center;
 }
 
 .navlinks ul li a {
@@ -567,4 +571,21 @@ footer a {
         border: 1px solid #cccccc59;
         margin: 10px 30px;
     }
+}
+.logo img{
+    max-width: 120px;
+    max-height: 800px;
+    position: fixed;
+    left: 20%;
+}
+/* ----------500px responsive */
+@media screen and (max-width: 500px){
+    .logo img{
+        left: 0;
+    }
+    .theme {
+        right: 0;
+      
+    }
+    
 }
